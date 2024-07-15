@@ -108,6 +108,7 @@
             let prevBtn = section06.querySelector('.prev');
             let nextBtn = section06.querySelector('.next');
 
+            let text = section06.querySelector('.text');
             let bg = section06.querySelectorAll('.pages div');
             let word = section06.querySelectorAll('.keyWords span')
             let descriptioin = section06.querySelectorAll('.description li')
@@ -116,8 +117,15 @@
 
             nextBtn.addEventListener('click', () => {
                 i++;
+                
                 if (i >= bg.length) {
-                    i = bg.length - 1;
+                    i = bg.length - 1;   
+                }
+
+                
+
+                else if (i === bg.length - 1) {
+                    text.classList.add('on');
                 }
 
                 bg.forEach((item) => {
@@ -140,6 +148,9 @@
 
                 if (i <= 0) {
                     i = 0;
+                }
+                else if (i != bg.length - 1) {
+                    text.classList.remove('on');
                 }
                 bg.forEach((item) => {
                     item.classList.remove('on');

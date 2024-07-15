@@ -1094,6 +1094,11 @@ body {
     position: absolute;
     bottom: 150px;
     left: 0;
+    transition: 1.5s 1s;
+}
+
+.section06 .image_box .text.on {
+    bottom: 300px;
 }
 
 .section06 .image_box .text h2 {
